@@ -1,0 +1,7 @@
+<h3>
+<%= @task.completed ? "[x] Task has been completed |" : "[ ] Task has not been completed |" %>
+<%=  @task.title %> <span>|| - ||</span> <%= @task.details %><br>
+<%= link_to "Back", tasks_path %><br>
+<%= link_to "Edit", edit_task_path %><br>
+<%= link_to "Delete", @task, method: 'delete', data: {confirm: "Are you sure"} %>
+</h3>
